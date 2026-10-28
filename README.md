@@ -1,4 +1,4 @@
-# 🧪 Chlorhexidine Trial – Survival Analysis Using Python  
+# Chlorhexidine Trial – Survival Analysis Using Python  
 _An end-to-end time-to-event modeling project based on real ICU clinical data_
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
@@ -8,7 +8,7 @@ _An end-to-end time-to-event modeling project based on real ICU clinical data_
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project performs a complete **survival analysis** on data from a *registered clinical trial* comparing two concentrations of Chlorhexidine (0.12% vs 0.20%) for the prevention of **Ventilator-Associated Pneumonia (VAP)**.
 
@@ -25,12 +25,18 @@ This repository forms part of a Capstone Project in Survival Analysis.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
+| Path | Contents |
+| --- | --- |
+| `chlorhexidine_trial.ipynb` | The full analysis notebook |
+| `DATA/Data form Chlorhexidine Trial.xlsx` | Trial data used in the notebook |
+| `DATA/Capstone Project_Survival_analysis.docx` | Written capstone report |
+| `DATA/V7N3_e4a9253f-6b0b-4153-a4a4-7ef730d0ac80.pdf` | Reference publication for the trial |
 
 ---
 
-## 📊 1. Dataset Description
+## 1. Dataset Description
 
 ### **A. Baseline Variables**
 | Variable | Description |
@@ -51,7 +57,7 @@ The dataset does NOT contain survival variables (`time`, `event`) and required c
 
 ---
 
-## ⚙️ 2. Survival Variable Construction (Hybrid Clinical Logic)
+## 2. Survival Variable Construction (Hybrid Clinical Logic)
 
 Because of inconsistencies in the raw dataset, a hybrid rule was used.
 
@@ -72,7 +78,7 @@ This aligns with clinical decision-making.
 
 ---
 
-## 📈 3. Kaplan–Meier Survival Analysis
+## 3. Kaplan–Meier Survival Analysis
 
 KM curves were generated for both CHX arms:
 
@@ -87,7 +93,7 @@ Observations:
 
 ---
 
-## 🧪 4. Log-Rank Test
+## 4. Log-Rank Test
 
 A log-rank test compared survival curves between the two groups.
 
@@ -98,7 +104,7 @@ Given the low event rate, significant differences were unlikely.
 
 ---
 
-## 📉 5. Cox Proportional Hazards Model
+## 5. Cox Proportional Hazards Model
 
 A multivariable Cox model was fit with:
 
@@ -119,7 +125,7 @@ Interpretation typically showed:
 
 ---
 
-## ▶️ 6. How to Run This Notebook
+## 6. How to Run This Notebook
 
 ### **A. Google Colab**
 1. Open Colab  
@@ -130,6 +136,5 @@ Interpretation typically showed:
 ### **B. Local**
 ```bash
 pip install lifelines pandas numpy seaborn matplotlib openpyxl
-jupyter notebook
-# chlorhexidine-survival-analysis
-Survival analysis for Chlorhexidine Trial using Kaplan–Meier and Cox model
+jupyter notebook chlorhexidine_trial.ipynb
+```
